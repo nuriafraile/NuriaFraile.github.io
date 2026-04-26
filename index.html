@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        /* MENÚ SUPERIOR FIX */
+        /* MENÚ SUPERIOR */
         nav {
             position: fixed;
             top: 0;
@@ -46,12 +46,50 @@
             text-decoration: underline;
         }
 
+        /* BOTÓ HAMBURGUESA (només mòbil) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 12px;
+        }
+
+        .hamburger div {
+            width: 28px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* MENÚ MÒBIL OCULT */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #012a4a;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
         header {
             background: linear-gradient(135deg, #2a6f97, #014f86);
             color: white;
-            padding: 120px 20px 80px 20px; /* espai extra per no tapar el menú */
+            padding: 120px 20px 80px 20px;
             text-align: center;
-            margin-top: 50px; /* evita que el menú tapi el títol */
+            margin-top: 50px;
         }
 
         header h1 {
@@ -117,13 +155,26 @@
             text-decoration: underline;
         }
     </style>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </head>
 
 <body>
 
 <!-- MENÚ SUPERIOR -->
 <nav>
-    <ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul id="menu">
         <li><a href="#quisoc">Qui sóc</a></li>
         <li><a href="#experiencia">Experiència</a></li>
         <li><a href="#competencies">Competències</a></li>
