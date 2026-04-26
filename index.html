@@ -12,13 +12,46 @@
             color: #333;
             line-height: 1.6;
             background-color: #f7f9fb;
+            scroll-behavior: smooth;
+        }
+
+        /* MENÚ SUPERIOR FIX */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #012a4a;
+            padding: 12px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         header {
             background: linear-gradient(135deg, #2a6f97, #014f86);
             color: white;
-            padding: 80px 20px;
+            padding: 120px 20px 80px 20px; /* espai extra per no tapar el menú */
             text-align: center;
+            margin-top: 50px; /* evita que el menú tapi el títol */
         }
 
         header h1 {
@@ -88,16 +121,29 @@
 
 <body>
 
+<!-- MENÚ SUPERIOR -->
+<nav>
+    <ul>
+        <li><a href="#quisoc">Qui sóc</a></li>
+        <li><a href="#experiencia">Experiència</a></li>
+        <li><a href="#competencies">Competències</a></li>
+        <li><a href="#formacio">Formació</a></li>
+        <li><a href="#certificacions">Certificacions</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+    </ul>
+</nav>
+
 <header>
     <h1>Administració, Finances i Consultoria ERP</h1>
     <p>Optimització de processos, gestió comptable i implantació d’ERP amb una mirada clara, eficient i humana</p>
 </header>
 
 <section>
-    <div class="block">
+
+    <!-- QUI SÓC -->
+    <div class="block" id="quisoc">
         <h2>Qui sóc</h2>
 
-        <!-- FOTO DE PERFIL -->
         <img src="https://raw.githubusercontent.com/nuriafraile/NuriaFraile.github.io/6c2de88364ca68b0fedef5525531702bb87af209/IMG_20260408_205945.jpg" 
              alt="Foto de Núria Fraile" class="foto-perfil">
 
@@ -111,7 +157,8 @@
         </p>
     </div>
 
-    <div class="block">
+    <!-- EXPERIÈNCIA -->
+    <div class="block" id="experiencia">
         <h2>Experiència professional</h2>
 
         <h3>Consultoria tecnològica (ERP i processos)</h3>
@@ -147,7 +194,8 @@
         </ul>
     </div>
 
-    <div class="block">
+    <!-- COMPETÈNCIES -->
+    <div class="block" id="competencies">
         <h2>Competències i especialitats</h2>
         <ul>
             <li>Comptabilitat i finances</li>
@@ -161,7 +209,8 @@
         </ul>
     </div>
 
-    <div class="block">
+    <!-- FORMACIÓ -->
+    <div class="block" id="formacio">
         <h2>Formació</h2>
         <ul>
             <li>Màster en Dret Duaner i Tributari — Universitat de Barcelona</li>
@@ -171,7 +220,8 @@
         </ul>
     </div>
 
-    <div class="block">
+    <!-- CERTIFICACIONS -->
+    <div class="block" id="certificacions">
         <h2>Certificacions i tecnologies</h2>
         <ul>
             <li>Certificacions A3 (Eco, ERP, Innuva, Factura, Contabilidad)</li>
@@ -183,13 +233,15 @@
         </ul>
     </div>
 
-    <div class="block">
+    <!-- CONTACTE -->
+    <div class="block" id="contacte">
         <h2>Contacte professional</h2>
         <p>Si necessites informació addicional o vols comentar algun projecte o consulta professional:</p>
         <p><strong>Email:</strong> nuriafraile2002@yahoo.es</p>
         <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/núria-fraile-356770182" target="_blank">Perfil LinkedIn</a></p>
         <p><strong>Telèfon:</strong> 617 272 721</p>
     </div>
+
 </section>
 
 <footer>
