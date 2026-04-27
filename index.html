@@ -9,6 +9,7 @@
         :root {
             --blau: #1e4e79;
             --blau-clar: #e8f0fa;
+            --gris-suau: #f5f7fa;
         }
 
         body {
@@ -16,14 +17,15 @@
             font-family: Arial, sans-serif;
             background-color: #ffffff;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* --- MENÚ TRANSLÚCID AMB BLAU --- */
+        /* --- MENÚ --- */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(30, 78, 121, 0.75);
+            background: rgba(30, 78, 121, 0.85);
             backdrop-filter: blur(10px);
             padding: 15px 0;
             z-index: 1000;
@@ -46,28 +48,29 @@
         }
 
         nav a:hover {
-            color: #cfe2f5;
+            color: #dce9f7;
         }
 
-        /* --- CAPÇALERA --- */
+        /* --- HERO --- */
         .hero {
-            padding-top: 140px;
+            padding-top: 150px;
+            padding-bottom: 80px;
             text-align: center;
-            padding-bottom: 60px;
-            background: var(--blau-clar);
+            background: linear-gradient(180deg, var(--blau-clar), #ffffff);
         }
 
         .hero img {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             margin-bottom: 20px;
-            border: 4px solid var(--blau);
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 44px;
             margin-bottom: 10px;
             color: var(--blau);
         }
@@ -75,56 +78,66 @@
         .hero h2 {
             font-size: 22px;
             font-weight: 300;
-            margin-top: 0;
-            text-align: center;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #333;
-        }
-
-        /* --- FRANJA DE LOGOS --- */
-        .logo-strip {
-            width: 100%;
-            padding: 40px 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            background: #f7f7f7;
-            border-top: 1px solid #e5e5e5;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .logo-strip img {
-            height: 55px;
-            object-fit: contain;
+            margin: 0 auto;
+            color: #444;
         }
 
         /* --- SECCIONS --- */
         section {
-            padding: 60px 20px;
+            padding: 70px 20px;
             max-width: 900px;
             margin: auto;
         }
 
+        .alt {
+            background: var(--gris-suau);
+        }
+
         h3 {
-            font-size: 26px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 25px;
             color: var(--blau);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
         }
 
         ul {
-            line-height: 1.8;
+            line-height: 1.9;
+            font-size: 18px;
+            list-style: none;
+            padding-left: 0;
         }
 
-        /* --- ICONES PETITES --- */
-        .tech-icons img {
-            height: 28px;
-            margin-right: 10px;
-            vertical-align: middle;
+        ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
+        /* --- ICONES --- */
+        .icon {
+            width: 22px;
+            height: 22px;
+            fill: var(--blau);
+            flex-shrink: 0;
+        }
+
+        /* --- CONTACTE --- */
+        #contacte ul li a {
+            color: var(--blau);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #contacte ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 40px;
@@ -148,71 +161,100 @@
         </nav>
     </header>
 
-    <!-- CAPÇALERA -->
+    <!-- HERO -->
     <div class="hero" id="top">
         <img src="IMG_20260408_205945.jpg" alt="Foto de Núria Fraile">
         <h1>Núria Fraile</h1>
         <h2>Optimització de processos · Administració · Finances · ERP · Consultoria</h2>
     </div>
 
-    <!-- FRANJA DE LOGOS -->
-    <div class="logo-strip">
-        <!-- LOGOS — Demà hi posarem les imatges -->
-    </div>
-
     <!-- QUI SÓC -->
     <section id="quisoc">
-        <h3>Qui sóc</h3>
-        <p>Professional amb 25 anys d'experiència en administració, finances, comptabilitat, ERP, processos i gestió d’equips. Especialitzada en millora contínua, optimització i implantació d’eines de gestió.</p>
+        <h3>
+            <!-- Icona persona -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+            </svg>
+            Qui sóc
+        </h3>
+
+        <p>Professional amb experiència en administració, finances, comptabilitat, ERP, processos i gestió d’equips. Especialitzada en millora contínua, optimització i implantació d’eines de gestió.</p>
     </section>
 
     <!-- EXPERIÈNCIA -->
-    <section id="experiencia">
-        <h3>Experiència</h3>
+    <section id="experiencia" class="alt">
+        <h3>
+            <!-- Icona maletí -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/>
+            </svg>
+            Experiència
+        </h3>
+
         <ul>
-            <li>Responsable d’administració i finances</li>
-            <li>Consultora ERP i processos empresarial i digitalització</li>
-            <li>Implantació i millora d’eines de gestió</li>
-            <li>Control de gestió i optimització operativa</li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                Responsable d’administració i finances
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                Consultora ERP, processos i digitalització 
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                Implantació i millora d’eines de gestió
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                Control de gestió i optimització operativa
+            </li>
         </ul>
     </section>
 
     <!-- COMPETÈNCIES -->
     <section id="competencies">
-        <h3>Competències i tecnologies</h3>
-
-        <div class="tech-icons">
-            <!-- ICONES PETITES — Demà hi posarem les imatges -->
-        </div>
+        <h3>
+            <!-- Icona engranatge -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9.4 4.6l-2-.3a7 7 0 00-.6-1.4l1.2-1.6-1.4-1.4-1.6 1.2a7 7 0 00-1.4-.6l-.3-2h-2l-.3 2a7 7 0 00-1.4.6L7.4 6.9 6 8.3l1.2 1.6a7 7 0 00-.6 1.4l-2 .3v2l2 .3a7 7 0 00.6 1.4L6 15.7l1.4 1.4 1.6-1.2a7 7 0 001.4.6l.3 2h2l.3-2a7 7 0 001.4-.6l1.6 1.2 1.4-1.4-1.2-1.6a7 7 0 00.6-1.4l2-.3v-2z"/>
+            </svg>
+            Competències i tecnologies
+        </h3>
 
         <ul>
-
-            <li>Wolters Kluwer: A3ERP, A3Bank, A3Asesor, A3Innuva</li>
-            <li>SAP B1, Sage</li>
-            <li>Microsoft 365, Power BI</li>
-            <li>SQL Server, Qlik</li>
-            <li>Asana, ClickUp, Canva</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg> ERP: A3ERP, A3Bank, A3Asesor, A3Innuva, SAP, Sage</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg> Microsoft 365, Power BI</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg> SQL Server, Qlik</li>
+            <li><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 20H2z"/></svg> Asana, ClickUp, Canva</li>
         </ul>
     </section>
 
-<!-- CONTACTE -->
-<section id="contacte">
-    <h3>Contacte</h3>
+    <!-- CONTACTE -->
+    <section id="contacte" class="alt">
+        <h3>
+            <!-- Icona correu -->
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 13 2 6.76V18h20V6.76L12 13zm0-2.47L22 4H2l10 6.53z"/>
+            </svg>
+            Contacte
+        </h3>
 
-    <p>Pots contactar-me a través de:</p>
+        <p>Pots contactar-me a través de:</p>
 
-    <ul>
-        <li><strong>Correu electrònic:</strong> 
-            <a href="mailto:nuriafraile2002@yahoo.es">Enviar correu</a>
-        </li>
+        <ul>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 13 2 6.76V18h20V6.76L12 13z"/></svg>
+                <a href="mailto:nuriafraile2002@yahoo.es">Enviar correu</a>
+            </li>
 
-        <li><strong>LinkedIn:</strong> 
-            <a href="https://linkedin.com/in/núria-fraile-356770182" target="_blank">
-                Perfil de LinkedIn
-            </a>
-        </li>
-    </ul>
-</section>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+                <a href="https://linkedin.com/in/núria-fraile-356770182" target="_blank">
+                    Perfil de LinkedIn
+                </a>
+            </li>
+        </ul>
+    </section>
 
     <footer>
         © 2026 Núria Fraile
