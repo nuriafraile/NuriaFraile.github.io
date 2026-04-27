@@ -29,6 +29,9 @@
             justify-content: center;
             gap: 30px;
             font-size: 16px;
+            flex-wrap: wrap;
+            max-height: 200px;
+            overflow-y: auto;
         }
 
         nav a {
@@ -43,9 +46,17 @@
 
         /* --- CAPÇALERA --- */
         .hero {
-            padding-top: 120px;
+            padding-top: 140px;
             text-align: center;
             padding-bottom: 60px;
+        }
+
+        .hero img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -58,6 +69,9 @@
             font-weight: 300;
             margin-top: 0;
             text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* --- FRANJA DE LOGOS (BUIT PER ARA) --- */
@@ -82,100 +96,4 @@
         section {
             padding: 60px 20px;
             max-width: 900px;
-            margin: auto;
-        }
-
-        h3 {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        /* --- ICONES PETITES (BUIT PER ARA) --- */
-        .tech-icons img {
-            height: 28px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #f2f2f2;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- MENÚ -->
-    <header>
-        <nav>
-            <a href="#top">Home</a>
-            <a href="#quisoc">Qui sóc</a>
-            <a href="#experiencia">Experiència</a>
-            <a href="#competencies">Competències</a>
-            <a href="#contacte">Contacte</a>
-        </nav>
-    </header>
-
-    <!-- CAPÇALERA -->
-    <div class="hero" id="top">
-        <h1>Núria Fraile</h1>
-        <h2>Optimització de processos · Administració · Finances · ERP · Consultoria</h2>
-    </div>
-
-    <!-- FRANJA DE LOGOS (BUIT PER ARA) -->
-    <div class="logo-strip">
-        <!-- LOGOS — Demà hi posarem les imatges -->
-    </div>
-
-    <!-- QUI SÓC -->
-    <section id="quisoc">
-        <h3>Qui sóc</h3>
-        <p>Professional amb experiència en administració, finances, comptabilitat, ERP, processos i gestió d’equips. Especialitzada en millora contínua, optimització i implantació d’eines de gestió.</p>
-    </section>
-
-    <!-- EXPERIÈNCIA -->
-    <section id="experiencia">
-        <h3>Experiència</h3>
-        <ul>
-            <li>Responsable d’administració i finances</li>
-            <li>Consultora ERP i processos</li>
-            <li>Implantació i millora d’eines de gestió</li>
-            <li>Control de gestió i optimització operativa</li>
-        </ul>
-    </section>
-
-    <!-- COMPETÈNCIES -->
-    <section id="competencies">
-        <h3>Competències i tecnologies</h3>
-
-        <div class="tech-icons">
-            <!-- ICONES PETITES — Demà hi posarem les imatges -->
-        </div>
-
-        <ul>
-            <li>ERP: A3ERP, A3Bank, A3Asesor, A3Innuva, SAP, Sage</li>
-            <li>Microsoft 365, Power BI</li>
-            <li>SQL Server, Qlik</li>
-            <li>Asana, ClickUp, Canva</li>
-        </ul>
-    </section>
-
-    <!-- CONTACTE -->
-    <section id="contacte">
-        <h3>Contacte</h3>
-        <p>Pots contactar-me a través de LinkedIn o per correu electrònic.</p>
-    </section>
-
-    <footer>
-        © 2026 Núria Fraile
-    </footer>
-
-</body>
-</html>
+            margin
