@@ -126,6 +126,15 @@
             flex-shrink: 0;
         }
 
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--blau);
+            color: white;
+            margin-top: 40px;
+        }
+
         /* --- CONTACTE --- */
         #contacte ul li a {
             color: var(--blau);
@@ -135,15 +144,6 @@
 
         #contacte ul li a:hover {
             text-decoration: underline;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--blau);
-            color: white;
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -173,7 +173,7 @@
         <h3>
             <!-- Icona persona -->
             <svg class="icon" viewBox="0 0 24 24">
-                <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+                <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4 0-8 2-8 5v1h16v-1c0-3-4-5-8-5Z"/>
             </svg>
             Qui sóc
         </h3>
@@ -186,26 +186,26 @@
         <h3>
             <!-- Icona maletí -->
             <svg class="icon" viewBox="0 0 24 24">
-                <path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/>
+                <path d="M10 2h4a2 2 0 0 1 2 2v2h4v14H4V6h4V4a2 2 0 0 1 2-2Zm0 4h4V4h-4Z"/>
             </svg>
             Experiència
         </h3>
 
         <ul>
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                 Responsable d’administració i finances
             </li>
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
-                Consultora ERP, processos i digitalització 
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Consultora ERP i processos
             </li>
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                 Implantació i millora d’eines de gestió
             </li>
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M10 2h4l2 3h5v17H3V5h5l2-3z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                 Control de gestió i optimització operativa
             </li>
         </ul>
@@ -216,25 +216,37 @@
         <h3>
             <!-- Icona engranatge -->
             <svg class="icon" viewBox="0 0 24 24">
-                <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9.4 4.6l-2-.3a7 7 0 00-.6-1.4l1.2-1.6-1.4-1.4-1.6 1.2a7 7 0 00-1.4-.6l-.3-2h-2l-.3 2a7 7 0 00-1.4.6L7.4 6.9 6 8.3l1.2 1.6a7 7 0 00-.6 1.4l-2 .3v2l2 .3a7 7 0 00.6 1.4L6 15.7l1.4 1.4 1.6-1.2a7 7 0 001.4.6l.3 2h2l.3-2a7 7 0 001.4-.6l1.6 1.2 1.4-1.4-1.2-1.6a7 7 0 00.6-1.4l2-.3v-2z"/>
+                <path d="M12 15a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8-3.5-1.8-.3a6.7 6.7 0 0 0-.5-1.2l1.1-1.4-1.4-1.4-1.4 1.1a6.7 6.7 0 0 0-1.2-.5L14.5 4h-2.9l-.3 1.8a6.7 6.7 0 0 0-1.2.5L8.7 5.2 7.3 6.6l1.1 1.4a6.7 6.7 0 0 0-.5 1.2L6 9.5v2.9l1.8.3a6.7 6.7 0 0 0 .5 1.2l-1.1 1.4 1.4 1.4 1.4-1.1a6.7 6.7 0 0 0 1.2.5l.3 1.8h2.9l.3-1.8a6.7 6.7 0 0 0 1.2-.5l1.4 1.1 1.4-1.4-1.1-1.4a6.7 6.7 0 0 0 .5-1.2l1.8-.3v-2z"/>
             </svg>
             Competències i tecnologies
         </h3>
 
         <ul>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg> ERP: A3ERP, A3Bank, A3Asesor, A3Innuva, SAP, Sage</li>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg> Microsoft 365, Power BI</li>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg> SQL Server, Qlik</li>
-            <li><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 20H2z"/></svg> Asana, ClickUp, Canva</li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                ERP: A3ERP, A3Bank, A3Asesor, A3Innuva, SAP, Sage
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Microsoft 365, Power BI
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                SQL Server, Qlik
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Asana, ClickUp, Canva
+            </li>
         </ul>
     </section>
 
     <!-- CONTACTE -->
     <section id="contacte" class="alt">
         <h3>
-            <!-- Icona correu -->
+            <!-- Icona correu amb solapa ben visible -->
             <svg class="icon" viewBox="0 0 24 24">
-                <path d="M12 13 2 6.76V18h20V6.76L12 13zm0-2.47L22 4H2l10 6.53z"/>
+                <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.2l8 5 8-5V8Zm0 2.8V16h16v-5.2l-8 5Z"/>
             </svg>
             Contacte
         </h3>
@@ -243,12 +255,12 @@
 
         <ul>
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M12 13 2 6.76V18h20V6.76L12 13z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.2l8 5 8-5V8Zm0 2.8V16h16v-5.2l-8 5Z"/></svg>
                 <a href="mailto:nuriafraile2002@yahoo.es">Enviar correu</a>
             </li>
 
             <li>
-                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+                <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h4v16H4Zm6 5h4v2a3 3 0 0 1 6 0v9h-4v-8a1 1 0 0 0-2 0v8h-4Z"/></svg>
                 <a href="https://linkedin.com/in/núria-fraile-356770182" target="_blank">
                     Perfil de LinkedIn
                 </a>
