@@ -3,301 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Núria Fraile – Administració, Finances i Consultoria ERP</title>
+    <title>Núria Fraile – Administració, Finances i Processos</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #ffffff;
             color: #333;
-            line-height: 1.6;
-            background-color: #f7f9fb;
-            scroll-behavior: smooth;
         }
 
-        /* MENÚ SUPERIOR */
-        nav {
+        /* --- MENÚ TRANSLÚCID --- */
+        header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #012a4a;
-            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
             z-index: 1000;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
 
-        nav ul {
-            list-style: none;
+        nav {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin: 0;
-            padding: 0;
+            gap: 30px;
+            font-size: 16px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
+            color: #333;
             font-weight: bold;
-            font-size: 0.95rem;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #0078d4;
         }
 
-        /* BOTÓ HAMBURGUESA (només mòbil) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 12px;
-        }
-
-        .hamburger div {
-            width: 28px;
-            height: 3px;
-            background: white;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
-
-        /* MENÚ MÒBIL OCULT */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background: #012a4a;
-                width: 100%;
-                text-align: center;
-                padding: 20px 0;
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        header {
-            background: linear-gradient(135deg, #2a6f97, #014f86);
-            color: white;
-            padding: 120px 20px 80px 20px;
+        /* --- CAPÇALERA --- */
+        .hero {
+            padding-top: 120px;
             text-align: center;
-            margin-top: 50px;
+            padding-bottom: 60px;
         }
 
-        header h1 {
-            font-size: 2.4rem;
+        .hero h1 {
+            font-size: 42px;
             margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .hero h2 {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 0;
+            text-align: center;
         }
 
+        /* --- FRANJA DE LOGOS (BUIT PER ARA) --- */
+        .logo-strip {
+            width: 100%;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #f7f7f7;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo-strip img {
+            height: 55px;
+            object-fit: contain;
+        }
+
+        /* --- SECCIONS --- */
         section {
+            padding: 60px 20px;
             max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
+            margin: auto;
         }
 
-        h2 {
-            color: #014f86;
-            border-left: 5px solid #2a6f97;
-            padding-left: 10px;
+        h3 {
+            font-size: 26px;
             margin-bottom: 20px;
         }
 
-        .block {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        ul {
+            line-height: 1.8;
         }
 
-        p, li {
-            text-align: justify;
-        }
-
-        .foto-perfil {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto 20px auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        /* --- ICONES PETITES (BUIT PER ARA) --- */
+        .tech-icons img {
+            height: 28px;
+            margin-right: 10px;
+            vertical-align: middle;
         }
 
         footer {
-            background: #012a4a;
-            color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
-
-        a {
-            color: #2a6f97;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            padding: 40px;
+            background: #f2f2f2;
+            margin-top: 40px;
         }
     </style>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
-        }
-    </script>
 </head>
 
 <body>
 
-<!-- MENÚ SUPERIOR -->
-<nav>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+    <!-- MENÚ -->
+    <header>
+        <nav>
+            <a href="#top">Home</a>
+            <a href="#quisoc">Qui sóc</a>
+            <a href="#experiencia">Experiència</a>
+            <a href="#competencies">Competències</a>
+            <a href="#contacte">Contacte</a>
+        </nav>
+    </header>
+
+    <!-- CAPÇALERA -->
+    <div class="hero" id="top">
+        <h1>Núria Fraile</h1>
+        <h2>Optimització de processos · Administració · Finances · ERP · Consultoria</h2>
     </div>
 
-    <ul id="menu">
-        <li><a href="#quisoc">Qui sóc</a></li>
-        <li><a href="#experiencia">Experiència</a></li>
-        <li><a href="#competencies">Competències</a></li>
-        <li><a href="#formacio">Formació</a></li>
-        <li><a href="#certificacions">Certificacions</a></li>
-        <li><a href="#contacte">Contacte</a></li>
-    </ul>
-</nav>
-
-<header>
-    <h1>Administració, Finances i Consultoria ERP</h1>
-    <p>Optimització de processos, gestió comptable i implantació d’ERP amb una mirada clara, eficient i humana</p>
-</header>
-
-<section>
+    <!-- FRANJA DE LOGOS (BUIT PER ARA) -->
+    <div class="logo-strip">
+        <!-- LOGOS — Demà hi posarem les imatges -->
+    </div>
 
     <!-- QUI SÓC -->
-    <div class="block" id="quisoc">
-        <h2>Qui sóc</h2>
-
-        <img src="https://raw.githubusercontent.com/nuriafraile/NuriaFraile.github.io/6c2de88364ca68b0fedef5525531702bb87af209/IMG_20260408_205945.jpg" 
-             alt="Foto de Núria Fraile" class="foto-perfil">
-
-        <p>
-            Sóc una professional de l’àrea administrativa i financera amb una trajectòria consolidada en gestió, 
-            comptabilitat, control i optimització de processos. He treballat en entorns de consultoria tecnològica, 
-            indústria i serveis, liderant equips, implantant sistemes ERP i millorant fluxos de treball.
-        </p>
-        <p>
-            Treballo amb un enfocament pràctic, orientat a resultats i amb una comunicació clara i propera amb equips i clients.
-        </p>
-    </div>
+    <section id="quisoc">
+        <h3>Qui sóc</h3>
+        <p>Professional amb experiència en administració, finances, comptabilitat, ERP, processos i gestió d’equips. Especialitzada en millora contínua, optimització i implantació d’eines de gestió.</p>
+    </section>
 
     <!-- EXPERIÈNCIA -->
-    <div class="block" id="experiencia">
-        <h2>Experiència professional</h2>
-
-        <h3>Consultoria tecnològica (ERP i processos)</h3>
+    <section id="experiencia">
+        <h3>Experiència</h3>
         <ul>
-            <li>Coordinació d’equips de consultoria i suport</li>
-            <li>Implantació de solucions ERP i migració de dades</li>
-            <li>Optimització de processos administratius i comptables</li>
-            <li>Consultes SQL, informes i plantilles de reporting</li>
-            <li>Assessorament comptable, fiscal i de gestió</li>
+            <li>Responsable d’administració i finances</li>
+            <li>Consultora ERP i processos</li>
+            <li>Implantació i millora d’eines de gestió</li>
+            <li>Control de gestió i optimització operativa</li>
         </ul>
-
-        <h3>Indústria (entorn multinacional)</h3>
-        <ul>
-            <li>Supervisió de processos comptables i financers</li>
-            <li>Reporting avançat: KPIs, OPEX, COGS, CAPEX, EBITDA</li>
-            <li>Coordinació d’equips administratius</li>
-            <li>Auditoria interna i millora de procediments</li>
-            <li>Gestió d’operacions duaneres i fiscals</li>
-        </ul>
-
-        <h3>Sector industrial i serveis</h3>
-        <ul>
-            <li>Comptabilitat general i analítica</li>
-            <li>Tresoreria, conciliacions, pagaments i cartera</li>
-            <li>Gestió de riscos, flotes i processos administratius</li>
-            <li>Relació amb assessories, auditors i organismes oficials</li>
-        </ul>
-
-        <h3>Formació i consultoria freelance</h3>
-        <ul>
-            <li>Formació individual i suport acadèmic</li>
-            <li>Consultoria comptable i fiscal per PIMEs</li>
-        </ul>
-    </div>
+    </section>
 
     <!-- COMPETÈNCIES -->
-    <div class="block" id="competencies">
-        <h2>Competències i especialitats</h2>
-        <ul>
-            <li>Comptabilitat i finances</li>
-            <li>Control de gestió</li>
-            <li>Tributació i dret duaner</li>
-            <li>ERP: A3ERP, A3Innuva, Sage 200, SAP FI/CO, Infor M3</li>
-            <li>BI i dades: Power BI, Qlik Sense, SQL, Power Query, DAX</li>
-            <li>Millora de processos i digitalització</li>
-            <li>Lideratge d’equips i gestió de projectes</li>
-            <li>Reporting i anàlisi avançada</li>
-        </ul>
-    </div>
+    <section id="competencies">
+        <h3>Competències i tecnologies</h3>
 
-    <!-- FORMACIÓ -->
-    <div class="block" id="formacio">
-        <h2>Formació</h2>
-        <ul>
-            <li>Màster en Dret Duaner i Tributari — Universitat de Barcelona</li>
-            <li>Grau en Administració i Direcció d’Empreses</li>
-            <li>Diplomatura en Ciències Empresarials</li>
-            <li>FP Grau Superior en Administració</li>
-        </ul>
-    </div>
+        <div class="tech-icons">
+            <!-- ICONES PETITES — Demà hi posarem les imatges -->
+        </div>
 
-    <!-- CERTIFICACIONS -->
-    <div class="block" id="certificacions">
-        <h2>Certificacions i tecnologies</h2>
         <ul>
-            <li>Certificacions A3 (Eco, ERP, Innuva, Factura, Contabilidad)</li>
-            <li>SAP Business One (FI, CO, MM, SD, Crystal Reports)</li>
-            <li>Power BI, Qlik Sense, SQL, Power Query, Power Pivot</li>
-            <li>Sage 200, Contaplus, FacturaPlus</li>
-            <li>Microsoft 365 avançat</li>
-            <li>Asana, ClickUp, Canva, Photoshop, Disseny web</li>
+            <li>ERP: A3ERP, A3Bank, A3Asesor, A3Innuva, SAP, Sage</li>
+            <li>Microsoft 365, Power BI</li>
+            <li>SQL Server, Qlik</li>
+            <li>Asana, ClickUp, Canva</li>
         </ul>
-    </div>
+    </section>
 
     <!-- CONTACTE -->
-    <div class="block" id="contacte">
-        <h2>Contacte professional</h2>
-        <p>Si necessites informació addicional o vols comentar algun projecte o consulta professional:</p>
-        <p><strong>Email:</strong> nuriafraile2002@yahoo.es</p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/núria-fraile-356770182" target="_blank">Perfil LinkedIn</a></p>
-        <p><strong>Telèfon:</strong> 617 272 721</p>
-    </div>
+    <section id="contacte">
+        <h3>Contacte</h3>
+        <p>Pots contactar-me a través de LinkedIn o per correu electrònic.</p>
+    </section>
 
-</section>
-
-<footer>
-    © 2026 Núria Fraile — Web personal
-</footer>
+    <footer>
+        © 2026 Núria Fraile
+    </footer>
 
 </body>
 </html>
