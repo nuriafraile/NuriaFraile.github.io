@@ -6,6 +6,11 @@
     <title>Núria Fraile – Administració, Finances i Processos</title>
 
     <style>
+        :root {
+            --blau: #1e4e79;
+            --blau-clar: #e8f0fa;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -13,12 +18,12 @@
             color: #333;
         }
 
-        /* --- MENÚ TRANSLÚCID --- */
+        /* --- MENÚ TRANSLÚCID AMB BLAU --- */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(30, 78, 121, 0.75);
             backdrop-filter: blur(10px);
             padding: 15px 0;
             z-index: 1000;
@@ -36,12 +41,12 @@
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
         }
 
         nav a:hover {
-            color: #0078d4;
+            color: #cfe2f5;
         }
 
         /* --- CAPÇALERA --- */
@@ -49,6 +54,7 @@
             padding-top: 140px;
             text-align: center;
             padding-bottom: 60px;
+            background: var(--blau-clar);
         }
 
         .hero img {
@@ -57,11 +63,13 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
+            border: 4px solid var(--blau);
         }
 
         .hero h1 {
             font-size: 42px;
             margin-bottom: 10px;
+            color: var(--blau);
         }
 
         .hero h2 {
@@ -72,9 +80,10 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            color: #333;
         }
 
-        /* --- FRANJA DE LOGOS (BUIT PER ARA) --- */
+        /* --- FRANJA DE LOGOS --- */
         .logo-strip {
             width: 100%;
             padding: 40px 0;
@@ -102,13 +111,14 @@
         h3 {
             font-size: 26px;
             margin-bottom: 20px;
+            color: var(--blau);
         }
 
         ul {
             line-height: 1.8;
         }
 
-        /* --- ICONES PETITES (BUIT PER ARA) --- */
+        /* --- ICONES PETITES --- */
         .tech-icons img {
             height: 28px;
             margin-right: 10px;
@@ -118,7 +128,8 @@
         footer {
             text-align: center;
             padding: 40px;
-            background: #f2f2f2;
+            background: var(--blau);
+            color: white;
             margin-top: 40px;
         }
     </style>
@@ -139,12 +150,12 @@
 
     <!-- CAPÇALERA -->
     <div class="hero" id="top">
-        <img src="foto.jpg" alt="Foto de Núria Fraile">
+        <img src="IMG_20260408_205945.jpg" alt="Foto de Núria Fraile">
         <h1>Núria Fraile</h1>
         <h2>Optimització de processos · Administració · Finances · ERP · Consultoria</h2>
     </div>
 
-    <!-- FRANJA DE LOGOS (BUIT PER ARA) -->
+    <!-- FRANJA DE LOGOS -->
     <div class="logo-strip">
         <!-- LOGOS — Demà hi posarem les imatges -->
     </div>
